@@ -283,8 +283,9 @@ person1.skrivUt();
 
 
 const titleInput = document.getElementById("title");
-const titleText = document.getElementById("text");
-const datumNew = new Date();
+const textInput = document.getElementById("text")
+
+const blogg = document.getElementById("blogg");
 
 const knapp = document.getElementById("btn7");
 
@@ -296,22 +297,30 @@ if (knapp) {
 
 function visablogginlägg() {
 
-    titlevärde = titleInput.value;
+    if ()
 
-    
-}
+    const datumNew = new Date();
+
+    const blogginlägg1 = new blogginlägg(
+        titleInput.value,
+        textInput.value,
+        datumNew.toLocaleDateString("sv-SE")
+    );
+
+
+};
 
 
 
 class blogginlägg{
-    title : "string",
-    text : "string",
-    datum : "string",
+    title : string,
+    text : string,
+    datum : string,
 
     constructor(
-        title : "string",
-        text : "string",
-        datum : "string",
+        title : string,
+        text : string,
+        datum : string,
     ) {
         this.title = title;
         this.text = text;
