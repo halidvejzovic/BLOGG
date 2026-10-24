@@ -288,19 +288,33 @@ const datumNew = new Date();
 
 const knapp = document.getElementById("btn7");
 
-knapp?.addEventListener("click" () => {
-    visa-blogginlägg();
-});
+if (knapp) {
+   knapp.addEventListener("click", () => {
+    visablogginlägg();
+})
+}; 
+
+function visablogginlägg() {
+
+    titlevärde = titleInput.value;
+
+    
+}
 
 
 
-class blogginlägg(
+class blogginlägg{
     title : "string",
     text : "string",
     datum : "string",
 
-    
-
-
-
-)
+    constructor(
+        title : "string",
+        text : "string",
+        datum : "string",
+    ) {
+        this.title = title;
+        this.text = text;
+        this.datum = datum;
+    }
+} 
