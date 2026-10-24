@@ -286,11 +286,20 @@ const titleInput = document.getElementById("title");
 const titleText = document.getElementById("text");
 const datumNew = new Date();
 
+const knapp = document.getElementById("btn7");
 
+knapp?.addEventListener("click" () => {
+    visa-blogginlägg();
+});
 
 
 
 class blogginlägg(
+    title : "string",
+    text : "string",
+    datum : "string",
+
+    
 
 
 
