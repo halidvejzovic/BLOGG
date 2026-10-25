@@ -290,10 +290,14 @@ const person1 = new person(
 person1.skrivUt();
 
 */
+
 const titleInput = document.getElementById("title");
 const textInput = document.getElementById("text");
+
 const blogg = document.getElementById("blogg");
+
 const knapp = document.getElementById("btn7");
+
 if (knapp) {
     knapp.addEventListener("click", () => {
         visablogginlägg();
