@@ -88,3 +88,71 @@ person1.skrivUt();
 */
 
 
+const titleInput = document.getElementById("title");
+const textInput = document.getElementById("text")
+
+const blogg = document.getElementById("blogg");
+
+const knapp = document.getElementById("btn7");
+
+if (knapp) {
+   knapp.addEventListener("click", () => {
+    visablogginlägg();
+    
+})
+}; 
+
+function visablogginlägg() {
+
+    if (
+      titleInput instanceof HTMLInputElement &&
+      textInput instanceof HTMLTextAreaElement &&
+      blogg
+    ) {
+
+      const datumNew = new Date();
+
+      const blogginlägg1 = new blogginlägg(
+        titleInput.value,
+        textInput.value,
+        datumNew.toLocaleDateString("sv-SE")
+    );
+
+    const nyttInlägg = document.createElement("div");
+
+    const titel = document.createElement("h2");
+    titel.textContent = blogginlägg1.title;
+
+    const textIn = document.createElement("p");
+    textIn.textContent = blogginlägg1.text;
+
+    const datum = document.createElement("p");
+    datum.textContent = blogginlägg1.datum;
+
+    nyttInlägg.appendChild(titel);
+    nyttInlägg.appendChild(textIn);
+    nyttInlägg.appendChild(datum);
+
+
+    blogg.appendChild(nyttInlägg);
+
+
+  }
+};
+
+
+class blogginlägg{
+    title : string;
+    text : string;
+    datum : string;
+
+    constructor(
+        title : string,
+        text : string,
+        datum : string,
+    ) {
+        this.title = title;
+        this.text = text;
+        this.datum = datum;
+    }
+} 
