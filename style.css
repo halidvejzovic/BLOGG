@@ -254,7 +254,40 @@ h1 {
   }
 }
 
+
 .blogg-inlägg {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
   padding: 1rem;
-  color: #b46617;
+  margin-top: 1rem;
+}
+
+.blogg-titel {
+  color: darkgreen;
+  margin: auto;
+}
+
+.blogg-textIn {
+  line-height: 2;
+  border: 1px solid green;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.blogg-inlägg {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+};
+
+.blogg-titel {
+  color: darkgreen;
+  margin-bottom: 0.5rem;
+};
+
+.blogg-textIn {
+  line-height: 2;
 }
