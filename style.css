@@ -210,3 +210,36 @@ footer {
     display: flex;
   }
 }
+
+#main-blogg {
+  padding: 1rem;
+}
+
+#title,
+#författare {
+  width: 100%;
+}
+
+#text,
+#kommentar {
+  width: 100%;
+  height: 100px;
+}
+
+#btn7 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #main-blogg {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  #text,
+  #kommentar {
+    height: 100px;
+  }
+  #title, #författare, #btn7 {
+    width: auto;
+  }
+}
