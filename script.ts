@@ -118,14 +118,18 @@ function visablogginlägg() {
     );
 
     const nyttInlägg = document.createElement("div");
+    nyttInlägg.classList.add("blogg-inlägg");
 
     const titel = document.createElement("h2");
+    titel.classList.add("blogg-titel");
     titel.textContent = blogginlägg1.title;
 
     const textIn = document.createElement("p");
+    textIn.classList.add("blogg-textIn");
     textIn.textContent = blogginlägg1.text;
 
     const datum = document.createElement("p");
+    datum.classList.add("blogg-datum");
     datum.textContent = blogginlägg1.datum;
 
     nyttInlägg.appendChild(titel);

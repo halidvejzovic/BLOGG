@@ -211,6 +211,16 @@ footer {
   }
 }
 
+
+
+
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+
 #main-blogg {
   padding: 1rem;
 }
@@ -242,4 +252,9 @@ footer {
   #title, #författare, #btn7 {
     width: auto;
   }
+}
+
+.blogg-inlägg {
+  padding: 1rem;
+  color: #b46617;
 }
