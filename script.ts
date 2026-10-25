@@ -136,6 +136,30 @@ function visablogginlägg() {
     nyttInlägg.appendChild(textIn);
     nyttInlägg.appendChild(datum);
 
+    const kommentarInput = document.createElement("textarea");
+    kommentarInput.placeholder = "Skriv kommentar";
+    kommentarInput.classList.add("blogg-kommentarInput");
+
+    const författareInput = document.createElement("input");
+    författareInput.placeholder = "Författare";
+    författareInput.classList.add("blogg-författareInput");
+
+    const kommentarKnapp = document.createElement("button");
+    kommentarKnapp.textContent = "Kommentera";
+    kommentarKnapp.classList.add("blogg-kommentarKnapp");
+
+    const kommenteraContainer = document.createElement("div");
+
+    kommentarKnapp.addEventListener("click", () => {
+
+      const kommentar = document.createElement("p");
+      kommentar.textContent = "Kommentar: " + kommentarInput.value;
+
+      
+
+
+    });
+
 
     blogg.appendChild(nyttInlägg);
 
