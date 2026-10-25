@@ -98,7 +98,6 @@ const knapp = document.getElementById("btn7");
 if (knapp) {
    knapp.addEventListener("click", () => {
     visablogginlägg();
-    
 })
 }; 
 
