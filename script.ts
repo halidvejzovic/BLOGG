@@ -157,19 +157,23 @@ function visablogginlägg() {
       kommentar.classList.add("blogg-kommentar");
 
       const författare = document.createElement("p");
-      författare.textContent = "Författare: " + författareInput;
+      författare.textContent = "Författare: " + författareInput.value;
       författare.classList.add("blogg-författare");
 
       const kommentarDatum = document.createElement("p");
-      
+      kommentarDatum.textContent = "Datum " + new Date().toLocaleDateString("sv-SE");
+      kommentarDatum.classList.add("blogg-kommentarDatum");
+
+      kommenteraContainer.appendChild(kommentar);
+      kommenteraContainer.appendChild(författare);
+      kommenteraContainer.appendChild(kommentarDatum);
  
-
-      
-
-
     });
 
-
+    nyttInlägg.appendChild(kommentarInput);
+    nyttInlägg.appendChild(författareInput);
+    nyttInlägg.appendChild(kommentarKnapp);
+    nyttInlägg.appendChild(kommenteraContainer);
     blogg.appendChild(nyttInlägg);
 
 
