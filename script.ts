@@ -135,7 +135,7 @@ function visablogginlägg() {
     nyttInlägg.appendChild(titel);
     nyttInlägg.appendChild(textIn);
     nyttInlägg.appendChild(datum);
-
+    // kommetars fältet
     const kommentarInput = document.createElement("textarea");
     kommentarInput.placeholder = "Skriv kommentar";
     kommentarInput.classList.add("blogg-kommentarInput");
@@ -154,6 +154,15 @@ function visablogginlägg() {
 
       const kommentar = document.createElement("p");
       kommentar.textContent = "Kommentar: " + kommentarInput.value;
+      kommentar.classList.add("blogg-kommentar");
+
+      const författare = document.createElement("p");
+      författare.textContent = "Författare: " + författareInput;
+      författare.classList.add("blogg-författare");
+
+      const kommentarDatum = document.createElement("p");
+      
+ 
 
       
 
