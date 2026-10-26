@@ -84,6 +84,8 @@ const person1 = new person(
 person1.skrivUt();
 
 */
+
+
 const titleInput = document.getElementById("title");
 const textInput = document.getElementById("text");
 const blogg = document.getElementById("blogg");
@@ -114,10 +116,49 @@ function visablogginlägg() {
         nyttInlägg.appendChild(titel);
         nyttInlägg.appendChild(textIn);
         nyttInlägg.appendChild(datum);
+        // kommetars fältet
+        const kommentarInput = document.createElement("textarea");
+        kommentarInput.placeholder = "Skriv kommentar";
+        kommentarInput.classList.add("blogg-kommentarInput");
+        
+        const författareInput = document.createElement("input");
+        författareInput.placeholder = "Författare";
+        författareInput.classList.add("blogg-författareInput");
+
+        const kommentarKnapp = document.createElement("button");
+        kommentarKnapp.textContent = "Kommentera";
+        kommentarKnapp.classList.add("blogg-kommentarKnapp");
+
+        const kommenteraContainer = document.createElement("div");
+
+        kommentarKnapp.addEventListener("click", () => {
+
+            const kommentar = document.createElement("p");
+            kommentar.textContent = "Kommentar: " + kommentarInput.value;
+            kommentar.classList.add("blogg-kommentar");
+
+            const författare = document.createElement("p");
+            författare.textContent = "Författare: " + författareInput.value;
+            författare.classList.add("blogg-författare");
+
+            const kommentarDatum = document.createElement("p");
+            kommentarDatum.textContent = "Datum " + new Date().toLocaleDateString("sv-SE");
+            kommentarDatum.classList.add("blogg-kommentarDatum");
+
+            kommenteraContainer.appendChild(kommentar);
+            kommenteraContainer.appendChild(författare);
+            kommenteraContainer.appendChild(kommentarDatum);
+        });
+
+        nyttInlägg.appendChild(kommentarInput);
+        nyttInlägg.appendChild(författareInput);
+        nyttInlägg.appendChild(kommentarKnapp);
+        nyttInlägg.appendChild(kommenteraContainer);
         blogg.appendChild(nyttInlägg);
     }
-}
-;
+};
+
+
 class blogginlägg {
     title;
     text;

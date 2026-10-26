@@ -291,3 +291,58 @@ h1 {
 .blogg-textIn {
   line-height: 2;
 }
+
+.blogg-kommentar {
+  background-color: #f5f5f5;
+  padding: 0.5;
+  border-left: 4px solid green;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.blogg-författare {
+  font-weight: bold;
+  color: darkgreen;
+  margin-top: 0.3rem;
+}
+
+blogg.kommentarDatum {
+  font-size: 0.8rem;
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.blogg-kommentarInput {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.blogg-författareInput {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.blogg-kommentarKnapp {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin-top:  0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blogg-kommentarKnapp:hover {
+  background-color: green;
+}
+
