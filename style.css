@@ -346,3 +346,91 @@ blogg.kommentarDatum {
   background-color: green;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+.loggin {
+  margin: 1rem;
+  padding: 1rem;
+  gap: 10px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "img section"
+  "img form";
+}
+
+
+.loggin section{
+    padding: 2rem;
+    grid-area: section;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid red;
+    background-color: aqua;
+    
+}
+
+.loggin img{
+    grid-area: img;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: 2px solid red;
+    display: block;
+}
+
+
+
+.loggin form{
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center;
+    color: white;
+    background-color: lightgreen;
+    border-radius: 20px;
+    border: 2px solid red;
+    padding-bottom: 2rem;
+    
+}
+
+
+ 
+.loggin h1, p, label {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    font-weight: 700;
+    
+    
+}
+
+.loggin section :last-child {
+    font-size: 30px;
+}
+
+
+
+
+

@@ -135,6 +135,7 @@ function visablogginlägg() {
     nyttInlägg.appendChild(titel);
     nyttInlägg.appendChild(textIn);
     nyttInlägg.appendChild(datum);
+    
     // kommetars fältet
     const kommentarInput = document.createElement("textarea");
     kommentarInput.placeholder = "Skriv kommentar";
