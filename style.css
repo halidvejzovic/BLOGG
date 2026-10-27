@@ -435,7 +435,7 @@ blogg.kommentarDatum {
 @media (min-width: 768px) {
   .loggin {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     grid-template-areas: 
     "img section"
     "img form";
