@@ -368,26 +368,27 @@ blogg.kommentarDatum {
   gap: 10px;
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-  "img section"
-  "img form";
+  "img"
+  "section"
+  "form";
 }
 
 
 .loggin section{
-    padding: 2rem;
-    grid-area: section;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    color: white;
-    border-radius: 20px;
-    border: 2px solid red;
-    background-color: aqua;
+  grid-area: section;
+  padding: 2rem;
+  box-sizing: border-box;  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 20px;
+  border: 2px solid red;
+  background-color: aqua;
     
 }
 
@@ -431,6 +432,15 @@ blogg.kommentarDatum {
 }
 
 
-
+@media (min-width: 768px) {
+  .loggin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "img section"
+    "img form";
+  }
+  
+}
 
 
