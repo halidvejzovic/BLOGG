@@ -297,6 +297,7 @@ const userName = "Halid";      // variabel const går inte att ändra
 const userPassword = "qwe123"  // variabel const går inte att ändra
 let formRef; // variabel.
 
+
 //  funktion init lokaliserar min form element.
 function initInloggning() { 
     formRef = document.querySelector("form");
@@ -370,12 +371,6 @@ function initInloggning() {
 
 }
 
-
-
-
-
-
-
 window.addEventListener("load", () => {
     if(document.getElementById("menu-btn")) {
         init();
@@ -396,27 +391,38 @@ window.addEventListener("load", () => {
 
 
 
+
+
+// BLOGG KODEN
+
+// Hämtar elemeten från html och spara dom i globala variablar.
 const titleInput = document.getElementById("title");
 const textInput = document.getElementById("text");
 const blogg = document.getElementById("blogg");
 const knapp = document.getElementById("btn7");
 
-
+// If-sats om knappen finns och man klickar påden så körs funktionen vissablogginlägg().
 if (knapp) {
     knapp.addEventListener("click", () => {
         visablogginlägg();
     });
 };
 
-
+// Funktiionen visablogginlägg().
 function visablogginlägg() {
-
+    
+    // Hämtar det som är spara i localstorage. I det här fallet användaren.
     const användareInloggad = localStorage.getItem("användare");
 
-    if (titleInput instanceof HTMLInputElement &&
-        textInput instanceof HTMLTextAreaElement &&
-        blogg) {
+    // If-sats kontrollerar att Elemtenen 
+    if (titleInput instanceof HTMLInputElement &&  // Kontrollerar att titleInput är en input element.
+        textInput instanceof HTMLTextAreaElement && // Kontrollerar att textInput är en input element.
+        blogg) {  // Kontrolerar att blogg-container finns.
+
+        // skapar dagens datum
         const datumNew = new Date();
+
+        
         const blogginlägg1 = new blogginlägg(användareInloggad || "Okänd", titleInput.value, textInput.value, datumNew.toLocaleDateString("sv-SE"));
 
         const nyttInlägg = document.createElement("div");
