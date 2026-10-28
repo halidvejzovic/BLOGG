@@ -441,4 +441,11 @@ blogg.kommentarDatum {
   
 }
 
-
+.blogg-användaretext {
+  background-color: #e8f5e9;
+  border-left: 4px solid darkgreen;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
