@@ -377,8 +377,8 @@ blogg.kommentarDatum {
 
 
 .loggin section{
+  
   grid-area: section;
-  padding: 2rem;
   box-sizing: border-box;  
   width: 100%;
   display: flex;
@@ -423,13 +423,11 @@ blogg.kommentarDatum {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     font-weight: 700;
+    padding: 0.5rem;
     
     
 }
 
-.loggin section :last-child {
-    font-size: 30px;
-}
 
 
 @media (min-width: 768px) {

@@ -95,6 +95,8 @@ const blogg = document.getElementById("blogg");
 
 const knapp = document.getElementById("btn7");
 
+const användareInloggad = localStorage.getItem("användare");
+
 if (knapp) {
    knapp.addEventListener("click", () => {
     visablogginlägg();
@@ -112,6 +114,7 @@ function visablogginlägg() {
       const datumNew = new Date();
 
       const blogginlägg1 = new blogginlägg(
+        användareInloggad || "Okänd",
         titleInput.value,
         textInput.value,
         datumNew.toLocaleDateString("sv-SE")
@@ -124,6 +127,10 @@ function visablogginlägg() {
     titel.classList.add("blogg-titel");
     titel.textContent = blogginlägg1.title;
 
+    const användaretext = document.createElement("p");
+    användaretext.classList.add("blogg-användaretext");
+    användaretext.textContent = "Användare: " + blogginlägg1.användare;
+
     const textIn = document.createElement("p");
     textIn.classList.add("blogg-textIn");
     textIn.textContent = blogginlägg1.text;
@@ -132,6 +139,7 @@ function visablogginlägg() {
     datum.classList.add("blogg-datum");
     datum.textContent = blogginlägg1.datum;
 
+    nyttInlägg.appendChild(användaretext);
     nyttInlägg.appendChild(titel);
     nyttInlägg.appendChild(textIn);
     nyttInlägg.appendChild(datum);
@@ -181,19 +189,21 @@ function visablogginlägg() {
   }
 };
 
-
 class blogginlägg{
-    title : string;
-    text : string;
-    datum : string;
+  användare: string;
+  title : string;
+  text : string;
+  datum : string;
 
     constructor(
-        title : string,
-        text : string,
-        datum : string,
+      användare: string,
+      title : string,
+      text : string,
+      datum : string,
     ) {
-        this.title = title;
-        this.text = text;
-        this.datum = datum;
+      this.användare = användare;
+      this.title = title;
+      this.text = text;
+      this.datum = datum;
     }
 } 
