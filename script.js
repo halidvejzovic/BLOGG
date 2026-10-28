@@ -422,34 +422,39 @@ function visablogginlägg() {
         // skapar dagens datum
         const datumNew = new Date();
 
-        
+
+        // Skapar ett blogginlägsobjekt. dvs 
         const blogginlägg1 = new blogginlägg(användareInloggad || "Okänd", titleInput.value, textInput.value, datumNew.toLocaleDateString("sv-SE"));
 
+        // Skapar en div element för blogginlägget.
         const nyttInlägg = document.createElement("div");
+        // Skapar en class blogg-inlägg för CSS.
         nyttInlägg.classList.add("blogg-inlägg");
 
-        const titel = document.createElement("h2");
-        titel.classList.add("blogg-titel");
-        titel.textContent = blogginlägg1.title;
+        
+        const titel = document.createElement("h2"); // Skapar en h2 element
+        titel.classList.add("blogg-titel"); // Skapar en class för CSS
+        titel.textContent = blogginlägg1.title; // Sätter texten till blogggtitel
 
-        const användaretext = document.createElement("p");
-        användaretext.classList.add("blogg-användaretext");
-        användaretext.textContent = "Användare: " + blogginlägg1.användare;
+        const användaretext = document.createElement("p"); // skapar en p element
+        användaretext.classList.add("blogg-användaretext");// Skapar en class för CSS
+        användaretext.textContent = "Användare: " + blogginlägg1.användare; // Skriver ut Användare: och den som är inloggaddvs det som finns sparat pålocalstorage.
 
-        const textIn = document.createElement("p");
-        textIn.classList.add("blogg-textIn");
-        textIn.textContent = blogginlägg1.text;
+        const textIn = document.createElement("p"); // skapar en p element för tex rutan där man skriver blogginlägget.
+        textIn.classList.add("blogg-textIn"); // skapar en class för CSS.
+        textIn.textContent = blogginlägg1.text; // innehåler det användaren har skrivit in i textarea-fältet.
 
         const datum = document.createElement("p");
         datum.classList.add("blogg-datum");
         datum.textContent = blogginlägg1.datum;
 
+        // Lägger all variablar i blogg div elementen 
         nyttInlägg.appendChild(användaretext);
         nyttInlägg.appendChild(titel);
         nyttInlägg.appendChild(textIn);
         nyttInlägg.appendChild(datum);
 
-        // kommetars fältet
+        // kommetars fältet samma princip som blogginlägget.
         const kommentarInput = document.createElement("textarea");
         kommentarInput.placeholder = "Skriv kommentar";
         kommentarInput.classList.add("blogg-kommentarInput");
@@ -490,14 +495,18 @@ function visablogginlägg() {
         blogg.appendChild(nyttInlägg);
 
     }
-}
-;
+};
+
+// klasen blogginlägg är en mall för hur ett blogg inlägg ska se ut dvs vilken datatyp som ska vara.
+// tillåtet att skriva in.
 class blogginlägg {
     användare;
     title;
     text;
     datum;
     constructor(användare, title, text, datum) {
+
+        // sparas i objektet.
         this.användare = användare;
         this.title = title;
         this.text = text;
